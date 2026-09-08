@@ -1,0 +1,238 @@
+/*
+   Belle's Flower Shop — design tokens & custom components
+   Fonts: Fraunces (display) + Work Sans (body)
+*/
+
+:root {
+  --color-bg: #fff7fb;
+  --color-ink: #3b2631;
+  --color-ink-soft: #5c5148;
+  --color-plum: #b8326a;
+  --color-plum-dark: #8f2452;
+  --color-sage: #c96b91;
+  --color-sage-light: #f8dce7;
+  --color-blush: #f09ab8;
+  --color-blush-light: #fde8f0;
+  --color-gold: #d27a9f;
+  --color-line: #edcbd8;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: "Work Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: "Fraunces", ui-serif, Georgia, serif;
+}
+
+/* ---------- Logo ---------- */
+.brand-mark {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+/* ---------- Focus states (accessibility) ---------- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--color-plum);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- Nav underline ---------- */
+.nav-link {
+  position: relative;
+  color: var(--color-ink);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 1.5px;
+  background: var(--color-plum);
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover::after,
+.nav-link[aria-current="page"]::after {
+  width: 100%;
+}
+
+.nav-link[aria-current="page"] {
+  color: var(--color-plum);
+}
+
+/* ---------- Buttons ---------- */
+.btn-primary {
+  background: var(--color-plum);
+  color: var(--color-bg);
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  border-radius: 999px 999px 999px 6px;
+  padding: 0.85rem 1.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: var(--color-plum-dark);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-plum);
+  border: 1.5px solid var(--color-plum);
+  font-weight: 600;
+  border-radius: 999px 999px 999px 6px;
+  padding: 0.8rem 1.7rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--color-plum);
+  color: var(--color-bg);
+}
+
+/* ---------- Organic card shape (petal corner) ---------- */
+.petal-card {
+  border-radius: 28px 28px 28px 6px;
+  background: #fff;
+  border: 1px solid var(--color-line);
+}
+
+.section-sage {
+  background: var(--color-sage-light);
+}
+
+.section-blush {
+  background: var(--color-blush-light);
+}
+
+/* ---------- Divider flourish ---------- */
+.flourish {
+  display: block;
+  margin: 0 auto;
+  color: var(--color-gold);
+}
+
+/* ---------- Hero reveal (single orchestrated moment) ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    animation: hero-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .hero-reveal.delay-1 {
+    animation-delay: 0.12s;
+  }
+
+  .hero-reveal.delay-2 {
+    animation-delay: 0.24s;
+  }
+
+  .hero-reveal.delay-3 {
+    animation-delay: 0.36s;
+  }
+}
+
+@keyframes hero-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Product filter chip ---------- */
+.filter-chip {
+  font-weight: 600;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--color-line);
+  color: var(--color-ink-soft);
+  transition: all 0.2s ease;
+}
+
+.filter-chip[aria-pressed="true"] {
+  background: var(--color-plum);
+  border-color: var(--color-plum);
+  color: #fff;
+}
+
+.filter-chip:hover:not([aria-pressed="true"]) {
+  border-color: var(--color-plum);
+  color: var(--color-plum);
+}
+
+/* ---------- Modal ---------- */
+#inquiry-modal[hidden] {
+  display: none;
+}
+
+.modal-backdrop {
+  background: rgba(46, 38, 33, 0.55);
+}
+
+/* ---------- Form field ---------- */
+.field-label {
+  font-weight: 600;
+  font-size: 0.925rem;
+  color: var(--color-ink);
+}
+
+.field-input {
+  border: 1.5px solid var(--color-line);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  background: #fff;
+  width: 100%;
+}
+
+.field-input:focus {
+  border-color: var(--color-plum);
+}
+
+.field-error {
+  color: #8a2b2b;
+  font-size: 0.85rem;
+}
+
+/* ---------- Utility: line length cap for prose ---------- */
+.prose-measure {
+  max-width: 62ch;
+}
+
+/* ---------- Marquee / press strip ---------- */
+.press-strip span {
+  color: var(--color-ink-soft);
+}

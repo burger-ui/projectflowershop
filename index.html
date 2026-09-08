@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Belle's Flower Shop — Hand-tied bouquets &amp; florals in Willow Creek</title>
+  <meta name="description"
+    content="Belle's Flower Shop hand-ties everyday bouquets, wedding florals, and living plants in Willow Creek." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Work+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind (Play CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: '#fff7fb',
+            ink: '#3b2631',
+            plum: { DEFAULT: '#b8326a', dark: '#8f2452' },
+            sage: { DEFAULT: '#c96b91', light: '#f8dce7' },
+            blush: { DEFAULT: '#f09ab8', light: '#fde8f0' },
+            gold: '#d27a9f',
+            line: '#edcbd8'
+          },
+          fontFamily: {
+            display: ['Fraunces', 'serif'],
+            sans: ['Work Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-bg text-ink antialiased">
+
+  <a href="#main"
+    class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-plum focus:text-white focus:px-4 focus:py-2 focus:rounded">Skip
+    to main content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="sticky top-0 z-40 bg-bg/95 backdrop-blur border-b border-line">
+    <div class="max-w-6xl mx-auto px-6 flex items-center justify-between h-20">
+      <a href="#home" class="brand-mark text-2xl text-plum">Belle&rsquo;s Flower Shop</a>
+
+      <nav aria-label="Primary" class="hidden md:flex items-center gap-9 font-medium">
+        <a href="#home" class="nav-link" aria-current="page">Home</a>
+        <a href="#shop" class="nav-link">Shop</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="hidden md:block">
+        <a href="#shop" class="btn-primary">Shop bouquets</a>
+      </div>
+
+      <button id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" class="md:hidden p-2 -mr-2"
+        aria-label="Toggle navigation menu">
+        <svg id="icon-open" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+        <svg id="icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" stroke-width="1.8"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-nav" aria-label="Mobile"
+      class="hidden md:hidden border-t border-line bg-bg px-6 py-4 flex flex-col gap-4 font-medium">
+      <a href="#home" class="nav-link" aria-current="page">Home</a>
+      <a href="#shop" class="nav-link">Shop</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section id="home"
+      class="max-w-6xl mx-auto px-6 pt-14 pb-20 md:pt-20 md:pb-28 grid md:grid-cols-2 gap-12 items-center scroll-mt-20">
+      <div>
+        <h1 class="hero-reveal font-display text-4xl sm:text-5xl md:text-[3.4rem] leading-[1.08] text-ink">
+          Flowers, arranged with a florist&rsquo;s hand.
+        </h1>
+        <p class="hero-reveal delay-1 mt-6 text-lg text-ink/80 prose-measure">
+          Belle&rsquo;s is a small studio on Maple Street where every stem is cut, conditioned, and tied by hand the
+          same morning it leaves us — for a kitchen table, a doorstep, or a wedding aisle.
+        </p>
+        <div class="hero-reveal delay-2 mt-8 flex flex-wrap gap-4">
+          <a href="#shop" class="btn-primary">
+            Shop arrangements
+          </a>
+          <a href="#contact" class="btn-secondary">
+            Book an event
+          </a>
+        </div>
+        <p class="hero-reveal delay-3 mt-8 text-sm text-ink-soft text-ink/60">
+          Same-day delivery in Willow Creek, order by 1pm.
+        </p>
+      </div>
+
+      <div class="hero-reveal delay-1" aria-hidden="true">
+        <svg viewBox="0 0 480 440" class="w-full h-auto max-w-md mx-auto" role="img"
+          aria-label="Line illustration of a hand-tied bouquet with peonies and anemones">
+          <ellipse cx="240" cy="410" rx="150" ry="14" fill="#c96b91" opacity="0.12" />
+          <path d="M180 260 C170 330 190 380 210 420" stroke="#c96b91" stroke-width="4" fill="none"
+            stroke-linecap="round" />
+          <path d="M240 250 C240 320 240 380 240 425" stroke="#c96b91" stroke-width="4" fill="none"
+            stroke-linecap="round" />
+          <path d="M300 260 C312 330 292 380 272 420" stroke="#c96b91" stroke-width="4" fill="none"
+            stroke-linecap="round" />
+          <path d="M195 320 q22 -18 30 6" stroke="#c96b91" stroke-width="3" fill="none" stroke-linecap="round" />
+          <path d="M285 320 q-22 -18 -30 6" stroke="#c96b91" stroke-width="3" fill="none" stroke-linecap="round" />
+          <rect x="205" y="330" width="70" height="40" rx="6" fill="none" stroke="#d27a9f" stroke-width="3" />
+
+          <!-- Peony left -->
+          <g transform="translate(150,190)">
+            <circle r="46" fill="#fde8f0" />
+            <circle r="34" fill="#f09ab8" />
+            <circle r="20" fill="#e6a3ac" />
+            <circle r="8" fill="#d27a9f" />
+          </g>
+
+          <!-- Anemone center -->
+          <g transform="translate(240,140)">
+            <circle r="52" fill="#fff" stroke="#b8326a" stroke-width="2.5" />
+            <circle r="16" fill="#3b2631" />
+            <g stroke="#b8326a" stroke-width="2">
+              <line x1="0" y1="-6" x2="0" y2="-40" />
+              <line x1="6" y1="-2" x2="34" y2="-22" />
+              <line x1="6" y1="4" x2="34" y2="22" />
+              <line x1="0" y1="6" x2="0" y2="40" />
+              <line x1="-6" y1="4" x2="-34" y2="22" />
+              <line x1="-6" y1="-2" x2="-34" y2="-22" />
+            </g>
+          </g>
+
+          <!-- Ranunculus right -->
+          <g transform="translate(330,200)">
+            <circle r="40" fill="#f8dce7" />
+            <circle r="30" fill="#f3b8cc" />
+            <circle r="18" fill="#c96b91" />
+            <circle r="6" fill="#8f2452" />
+          </g>
+
+          <!-- small filler blooms -->
+          <circle cx="205" cy="245" r="10" fill="#f09ab8" />
+          <circle cx="280" cy="250" r="9" fill="#d27a9f" />
+          <circle cx="245" cy="220" r="8" fill="#b8326a" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- ============ DIVIDER ============ -->
+    <div class="max-w-6xl mx-auto px-6">
+      <svg class="flourish" width="120" height="24" viewBox="0 0 120 24" aria-hidden="true">
+        <path d="M0 12 H45" stroke="currentColor" stroke-width="1.2" />
+        <circle cx="60" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.2" />
+        <path d="M75 12 H120" stroke="currentColor" stroke-width="1.2" />
+      </svg>
+    </div>
+
+    <!-- ============ FEATURED COLLECTIONS ============ -->
+    <section class="max-w-6xl mx-auto px-6 py-20" aria-labelledby="collections-heading">
+      <h2 id="collections-heading" class="font-display text-3xl md:text-4xl">Three ways to bring flowers home</h2>
+      <p class="mt-3 text-ink/70 prose-measure">Whatever the occasion, everything starts the same way — with whatever is
+        freshest at the flower market that morning.</p>
+
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <article class="petal-card p-7">
+          <svg class="w-12 h-12 text-plum" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <circle cx="24" cy="24" r="10" stroke="currentColor" stroke-width="2" />
+            <circle cx="24" cy="10" r="7" stroke="currentColor" stroke-width="2" />
+            <circle cx="38" cy="24" r="7" stroke="currentColor" stroke-width="2" />
+            <circle cx="24" cy="38" r="7" stroke="currentColor" stroke-width="2" />
+            <circle cx="10" cy="24" r="7" stroke="currentColor" stroke-width="2" />
+          </svg>
+          <h3 class="font-display text-xl mt-5">Everyday bouquets</h3>
+          <p class="mt-2 text-ink/70 text-sm leading-relaxed">Hand-tied and ready that afternoon — for a friend, a
+            thank-you, or just a Tuesday.</p>
+          <a href="#shop" class="mt-4 inline-block text-plum font-semibold text-sm nav-link">See bouquets</a>
+        </article>
+
+        <article class="petal-card p-7">
+          <svg class="w-12 h-12 text-plum" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <path d="M24 44V20" stroke="currentColor" stroke-width="2" />
+            <path d="M24 20c0-8-8-12-8-12s0 8 8 12Z" stroke="currentColor" stroke-width="2" />
+            <path d="M24 26c0-8 8-12 8-12s0 8-8 12Z" stroke="currentColor" stroke-width="2" />
+            <rect x="15" y="34" width="18" height="10" rx="2" stroke="currentColor" stroke-width="2" />
+          </svg>
+          <h3 class="font-display text-xl mt-5">Weddings &amp; events</h3>
+          <p class="mt-2 text-ink/70 text-sm leading-relaxed">Ceremony arches, table runners, and bridal bouquets,
+            planned with you from first sketch to strike.</p>
+          <a href="#shop" class="mt-4 inline-block text-plum font-semibold text-sm nav-link">See event florals</a>
+        </article>
+
+        <article class="petal-card p-7">
+          <svg class="w-12 h-12 text-plum" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <rect x="14" y="30" width="20" height="12" rx="2" stroke="currentColor" stroke-width="2" />
+            <path d="M24 30V10" stroke="currentColor" stroke-width="2" />
+            <path d="M24 10c-6 0-10 4-10 10 6 0 10-4 10-10Z" stroke="currentColor" stroke-width="2" />
+            <path d="M24 16c6 0 10 4 10 10-6 0-10-4-10-10Z" stroke="currentColor" stroke-width="2" />
+          </svg>
+          <h3 class="font-display text-xl mt-5">Living plants</h3>
+          <p class="mt-2 text-ink/70 text-sm leading-relaxed">Potted greenery and flowering plants for a desk, a
+            windowsill, or a housewarming that keeps going.</p>
+          <a href="#shop" class="mt-4 inline-block text-plum font-semibold text-sm nav-link">See plants</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS (genuine sequence) ============ -->
+    <section class="section-sage py-20">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="font-display text-3xl md:text-4xl">How an order becomes a bouquet</h2>
+        <ol class="mt-10 grid md:grid-cols-3 gap-10">
+          <li>
+            <span class="font-display text-5xl text-plum/40">1</span>
+            <h3 class="font-display text-xl mt-2">Choose your flowers</h3>
+            <p class="mt-2 text-ink/70 text-sm leading-relaxed">Pick a ready-made arrangement or tell us a color palette
+              and budget and we'll design around it.</p>
+          </li>
+          <li>
+            <span class="font-display text-5xl text-plum/40">2</span>
+            <h3 class="font-display text-xl mt-2">We hand-tie it that morning</h3>
+            <p class="mt-2 text-ink/70 text-sm leading-relaxed">Stems are cut and conditioned in-studio, so nothing sits
+              in a cooler for days before it reaches you.</p>
+          </li>
+          <li>
+            <span class="font-display text-5xl text-plum/40">3</span>
+            <h3 class="font-display text-xl mt-2">Delivered or ready for pickup</h3>
+            <p class="mt-2 text-ink/70 text-sm leading-relaxed">Order by 1pm for same-day delivery across Willow Creek,
+              or collect from the studio on Maple Street.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="max-w-3xl mx-auto px-6 py-20 text-center" aria-labelledby="testimonials-heading">
+      <h2 id="testimonials-heading" class="font-display text-3xl md:text-4xl">From the neighborhood</h2>
+
+      <div class="mt-10 relative min-h-[160px]">
+        <blockquote class="testimonial-slide">
+          <p class="font-display text-xl md:text-2xl italic text-ink/90">&ldquo;Belle&rsquo;s did the flowers for our
+            backyard wedding and somehow made forty dollars look like a florist's dream. Guests kept asking who did the
+            arch.&rdquo;</p>
+          <footer class="mt-4 text-sm text-ink/60">— Maya R., married on Elm Street</footer>
+        </blockquote>
+        <blockquote class="testimonial-slide hidden">
+          <p class="font-display text-xl md:text-2xl italic text-ink/90">&ldquo;I get the Tuesday bouquet subscription
+            for my office and it's genuinely the best part of my week. Never the same flowers twice.&rdquo;</p>
+          <footer class="mt-4 text-sm text-ink/60">— Devon P., regular subscriber</footer>
+        </blockquote>
+        <blockquote class="testimonial-slide hidden">
+          <p class="font-display text-xl md:text-2xl italic text-ink/90">&ldquo;Same-day delivery for my mother's
+            birthday, and the arrangement was still fresh a week and a half later. That's rare.&rdquo;</p>
+          <footer class="mt-4 text-sm text-ink/60">— Alicia F., Willow Creek</footer>
+        </blockquote>
+      </div>
+
+      <div class="mt-6 flex justify-center gap-2" role="tablist" aria-label="Testimonial selector">
+        <button class="testimonial-dot w-2.5 h-2.5 rounded-full bg-plum" aria-label="Testimonial 1"></button>
+        <button class="testimonial-dot w-2.5 h-2.5 rounded-full bg-line" aria-label="Testimonial 2"></button>
+        <button class="testimonial-dot w-2.5 h-2.5 rounded-full bg-line" aria-label="Testimonial 3"></button>
+      </div>
+    </section>
+
+    <!-- ============ SHOP ============ -->
+    <section id="shop" class="section-blush py-20 scroll-mt-20" aria-labelledby="shop-heading">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 id="shop-heading" class="font-display text-3xl md:text-4xl">Shop the studio</h2>
+        <p class="mt-4 text-ink/70 prose-measure">Ready-made bouquets, potted plants, and event florals — all cut and
+          arranged in Willow Creek.</p>
+        <div class="mt-8 flex flex-wrap gap-3" role="group" aria-label="Filter by category">
+          <button class="filter-chip" data-category="all" aria-pressed="true">All</button>
+          <button class="filter-chip" data-category="bouquets" aria-pressed="false">Bouquets</button>
+          <button class="filter-chip" data-category="plants" aria-pressed="false">Living plants</button>
+          <button class="filter-chip" data-category="events" aria-pressed="false">Weddings &amp; events</button>
+          <button class="filter-chip" data-category="subscriptions" aria-pressed="false">Subscriptions</button>
+        </div>
+        <p class="mt-4 text-sm text-ink/60"><span id="results-count">6 arrangements</span></p>
+        <div id="shop-grid" class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article class="product-card petal-card p-6 flex flex-col" data-category="bouquets">
+            <div class="text-3xl text-blush" aria-hidden="true">✽</div>
+            <h3 class="font-display text-lg mt-4">Sunday Market Bouquet</h3>
+            <p class="mt-1 text-sm text-ink/70 flex-1">Whatever&rsquo;s freshest that morning, gathered loosely for a
+              table or countertop.</p>
+            <div class="mt-4 flex items-center justify-between"><span class="font-semibold">From $48</span><button
+                class="inquire-btn text-sm font-semibold text-plum nav-link" data-item="Sunday Market Bouquet">Ask about
+                this</button></div>
+          </article>
+          <article class="product-card petal-card p-6 flex flex-col" data-category="bouquets">
+            <div class="text-3xl text-plum" aria-hidden="true">✽</div>
+            <h3 class="font-display text-lg mt-4">The Belle Classic</h3>
+            <p class="mt-1 text-sm text-ink/70 flex-1">A romantic, full round bouquet of garden roses, ranunculus, and
+              scented geranium.</p>
+            <div class="mt-4 flex items-center justify-between"><span class="font-semibold">From $65</span><button
+                class="inquire-btn text-sm font-semibold text-plum nav-link" data-item="The Belle Classic">Ask about
+                this</button></div>
+          </article>
+          <article class="product-card petal-card p-6 flex flex-col" data-category="plants">
+            <div class="text-3xl text-sage" aria-hidden="true">♧</div>
+            <h3 class="font-display text-lg mt-4">Potted Rosemary Topiary</h3>
+            <p class="mt-1 text-sm text-ink/70 flex-1">A trimmed rosemary spiral in a ceramic pot — equal parts kitchen
+              herb and centerpiece.</p>
+            <div class="mt-4 flex items-center justify-between"><span class="font-semibold">$32</span><button
+                class="inquire-btn text-sm font-semibold text-plum nav-link" data-item="Potted Rosemary Topiary">Ask
+                about this</button></div>
+          </article>
+          <article class="product-card petal-card p-6 flex flex-col" data-category="plants">
+            <div class="text-3xl text-sage" aria-hidden="true">♧</div>
+            <h3 class="font-display text-lg mt-4">Trailing Pothos, medium</h3>
+            <p class="mt-1 text-sm text-ink/70 flex-1">Easygoing and low-light tolerant, in a hand-glazed pot with
+              drainage.</p>
+            <div class="mt-4 flex items-center justify-between"><span class="font-semibold">$28</span><button
+                class="inquire-btn text-sm font-semibold text-plum nav-link" data-item="Trailing Pothos, medium">Ask
+                about this</button></div>
+          </article>
+          <article class="product-card petal-card p-6 flex flex-col" data-category="events">
+            <div class="text-3xl text-plum" aria-hidden="true">⌒</div>
+            <h3 class="font-display text-lg mt-4">Ceremony Arch Florals</h3>
+            <p class="mt-1 text-sm text-ink/70 flex-1">Asymmetric or full-coverage arch design, installed on-site and
+              struck after your event.</p>
+            <div class="mt-4 flex items-center justify-between"><span class="font-semibold">From $450</span><button
+                class="inquire-btn text-sm font-semibold text-plum nav-link" data-item="Ceremony Arch Florals">Ask about
+                this</button></div>
+          </article>
+          <article class="product-card petal-card p-6 flex flex-col" data-category="subscriptions">
+            <div class="text-3xl text-gold" aria-hidden="true">▣</div>
+            <h3 class="font-display text-lg mt-4">Weekly Bouquet Subscription</h3>
+            <p class="mt-1 text-sm text-ink/70 flex-1">A fresh hand-tied bouquet delivered every week, never repeating
+              the same flowers twice.</p>
+            <div class="mt-4 flex items-center justify-between"><span class="font-semibold">$42 / week</span><button
+                class="inquire-btn text-sm font-semibold text-plum nav-link" data-item="Weekly Bouquet Subscription">Ask
+                about this</button></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="scroll-mt-20" aria-labelledby="about-heading">
+      <div class="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 id="about-heading" class="font-display text-3xl md:text-4xl">A shop built around one worktable.</h2>
+          <p class="mt-5 text-ink/70 prose-measure">Belle&rsquo;s started in 2014 as a folding table at the Saturday
+            farmers market. Twelve years later, it&rsquo;s a proper studio on Maple Street — but every order still
+            passes through the same hands before it goes out the door.</p>
+          <p class="mt-4 text-ink/70 prose-measure">Flowers are ordered close to when they&rsquo;ll be used, cut and
+            conditioned the same morning, and hand-tied by whoever is at the table that day.</p>
+        </div>
+        <div class="petal-card p-8 section-sage">
+          <h3 class="font-display text-2xl">What stays the same every order</h3>
+          <div class="mt-7 space-y-6">
+            <div>
+              <h4 class="font-semibold text-plum">Seasonal &amp; local first</h4>
+              <p class="mt-1 text-sm text-ink/70">Stems come from nearby growers whenever the season allows.</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-plum">Same morning, one pair of hands</h4>
+              <p class="mt-1 text-sm text-ink/70">One florist takes an order from stem selection through to the final
+                tie.</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-plum">Rooted in the neighborhood</h4>
+              <p class="mt-1 text-sm text-ink/70">A portion of every wedding booking supports Willow Creek&rsquo;s
+                community garden.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section-sage py-20 scroll-mt-20" aria-labelledby="contact-heading">
+      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-5 gap-14">
+        <div class="md:col-span-2">
+          <h2 id="contact-heading" class="font-display text-4xl">Get in touch</h2>
+          <p class="mt-4 text-ink/70 prose-measure">Order a bouquet, ask a question, or start planning an event. We read
+            every message ourselves.</p>
+          <dl class="mt-10 space-y-6 text-sm">
+            <div>
+              <dt class="font-semibold">Studio address</dt>
+              <dd class="text-ink/70 mt-0.5">118 Maple Street<br />Willow Creek, OH 44890</dd>
+            </div>
+            <div>
+              <dt class="font-semibold">Phone</dt>
+              <dd class="text-ink/70 mt-0.5"><a href="tel:+15555550118" class="nav-link">(555) 555-0118</a></dd>
+            </div>
+            <div>
+              <dt class="font-semibold">Studio hours</dt>
+              <dd class="text-ink/70 mt-0.5">Tue–Fri: 9am – 6pm<br />Saturday: 9am – 3pm<br />Sun–Mon: Closed</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="md:col-span-3">
+          <div class="petal-card p-8">
+            <h3 class="font-display text-2xl">Send a message</h3>
+            <p class="mt-1 text-sm text-ink/60">Fields marked * are required.</p>
+            <form id="contact-form" novalidate class="mt-6 space-y-5">
+              <div><label for="name" class="field-label">Name *</label><input id="name" name="name" type="text" required
+                  class="field-input mt-1" aria-describedby="name-error" />
+                <p id="name-error" class="field-error hidden mt-1" role="alert"></p>
+              </div>
+              <div><label for="email" class="field-label">Email *</label><input id="email" name="email" type="email"
+                  required class="field-input mt-1" aria-describedby="email-error" />
+                <p id="email-error" class="field-error hidden mt-1" role="alert"></p>
+              </div>
+              <fieldset>
+                <legend class="field-label">What&rsquo;s this about?</legend>
+                <div class="mt-2 flex flex-wrap gap-x-6 gap-y-2 text-sm"><label class="flex items-center gap-2"><input
+                      type="radio" name="reason" value="order" checked class="accent-plum"> Order a
+                    bouquet</label><label class="flex items-center gap-2"><input type="radio" name="reason"
+                      value="wedding" class="accent-plum"> Wedding / event</label><label
+                    class="flex items-center gap-2"><input type="radio" name="reason" value="subscription"
+                      class="accent-plum"> Subscription</label></div>
+              </fieldset>
+              <div><label for="message" class="field-label">Message *</label><textarea id="message" name="message"
+                  rows="5" required class="field-input mt-1" aria-describedby="message-error"></textarea>
+                <p id="message-error" class="field-error hidden mt-1" role="alert"></p>
+              </div>
+              <button type="submit" class="btn-primary">Send message</button>
+            </form>
+            <div id="contact-success" tabindex="-1" class="hidden mt-6" role="status">
+              <h3 class="font-display text-xl">Message sent</h3>
+              <p class="mt-1 text-sm text-ink/70">Thanks for reaching out — we&rsquo;ll reply within one business day.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA BAND ============ -->
+    <section class="bg-plum text-bg py-16">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="font-display text-2xl md:text-3xl">Never miss the good stuff at the flower market.</h2>
+        <p class="mt-3 text-bg/80 prose-measure mx-auto">A short monthly note about what's in season, plus first access
+          to holiday bouquets before they sell out.</p>
+        <form class="mt-6 flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto" onsubmit="return false;">
+          <label for="newsletter-email" class="sr-only">Email address</label>
+          <input id="newsletter-email" type="email" required placeholder="you@email.com" class="field-input flex-1" />
+          <button type="submit"
+            class="bg-bg text-plum font-semibold px-6 py-3 rounded-full whitespace-nowrap hover:bg-blush-light transition-colors">Join
+            the list</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ INQUIRY MODAL ============ -->
+  <div id="inquiry-modal" hidden>
+    <div class="modal-backdrop fixed inset-0 z-50"></div>
+    <div class="fixed inset-0 z-50 flex items-center justify-center p-4">
+      <div role="dialog" aria-modal="true" aria-labelledby="inquiry-modal-title"
+        class="bg-bg rounded-2xl max-w-md w-full p-7 relative shadow-xl">
+        <button id="modal-close" class="absolute top-4 right-4 text-ink/50 hover:text-ink" aria-label="Close dialog">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        <h2 id="inquiry-modal-title" class="font-display text-2xl pr-8">Ask about this</h2>
+        <p class="mt-2 text-sm text-ink/60">We&rsquo;ll reply by email, usually within one business day.</p>
+        <form id="inquiry-form" class="mt-5 space-y-4">
+          <input type="hidden" id="inquiry-item" name="item" />
+          <div><label for="inq-name" class="field-label">Name</label><input id="inq-name" name="name" type="text"
+              required class="field-input mt-1" /></div>
+          <div><label for="inq-email" class="field-label">Email</label><input id="inq-email" name="email" type="email"
+              required class="field-input mt-1" /></div>
+          <div><label for="inq-message" class="field-label">Details (date, colors, budget)</label><textarea
+              id="inq-message" name="message" rows="3" class="field-input mt-1"></textarea></div>
+          <button type="submit" class="btn-primary w-full justify-center">Send inquiry</button>
+          <p id="inquiry-form-status" class="hidden text-sm text-plum text-center" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="border-t border-line">
+    <div class="max-w-6xl mx-auto px-6 py-14 grid sm:grid-cols-2 md:grid-cols-4 gap-10">
+      <div>
+        <p class="brand-mark text-xl text-plum">Belle&rsquo;s Flower Shop</p>
+        <p class="mt-3 text-sm text-ink/70">118 Maple Street<br />Willow Creek, OH 44890</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-sm mb-3">Explore</h3>
+        <ul class="space-y-2 text-sm text-ink/70">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#shop" class="nav-link">Shop</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold text-sm mb-3">Studio hours</h3>
+        <ul class="space-y-1 text-sm text-ink/70">
+          <li>Tue–Fri: 9am – 6pm</li>
+          <li>Saturday: 9am – 3pm</li>
+          <li>Sun–Mon: Closed</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold text-sm mb-3">Say hello</h3>
+        <ul class="space-y-2 text-sm text-ink/70">
+          <li><a href="tel:+15555550118" class="nav-link">(555) 555-0118</a></li>
+          <li><a href="mailto:hello@bellesflowershop.example" class="nav-link">hello@bellesflowershop.example</a></li>
+          <li><a href="https://instagram.com" class="nav-link">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-line py-6 text-center text-xs text-ink/50">
+      &copy; <span class="current-year">2026</span> Belle&rsquo;s Flower Shop. All arrangements made to order.
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
